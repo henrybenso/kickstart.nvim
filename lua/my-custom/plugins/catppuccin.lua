@@ -6,7 +6,8 @@ return {
     require('catppuccin').setup {
       flavour = 'frappe',
       integrations = {
-        ts_rainbow = true,
+        barbar = true,
+        mason = true,
       },
 
       color_overrides = {

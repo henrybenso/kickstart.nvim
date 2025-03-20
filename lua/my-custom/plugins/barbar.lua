@@ -1,3 +1,9 @@
+--Move to previous/next using arrow keys
+vim.api.nvim_set_keymap('n', '<A-left>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-right>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<A-x>', '<Cmd>BufferClose<CR>', { noremap = false, silent = true })
+
 return {
   'romgrk/barbar.nvim',
   dependencies = {
