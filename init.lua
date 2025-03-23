@@ -756,7 +756,7 @@ require('lazy').setup({
           lsp_format_opt = 'fallback'
         end
         return {
-          timeout_ms = 500, -- 2500
+          timeout_ms = 2500, -- 2500
           lsp_format = lsp_format_opt,
         }
       end,
@@ -771,7 +771,7 @@ require('lazy').setup({
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-        -- sql = { 'sql' },
+        sql = { 'sql' },
       },
     },
   },

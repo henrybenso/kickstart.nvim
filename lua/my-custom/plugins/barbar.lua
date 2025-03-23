@@ -1,3 +1,7 @@
+-- Move to previous/next
+vim.api.nvim_set_keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+
 --Move to previous/next using arrow keys
 vim.api.nvim_set_keymap('n', '<A-left>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-right>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
@@ -12,6 +16,18 @@ return {
   },
   init = function()
     vim.g.barbar_auto_setup = false
+  end,
+  config = function()
+    require('barbar').setup {
+      icons = {
+        diagnostics = {
+          [vim.diagnostic.severity.ERROR] = { enabled = true },
+          [vim.diagnostic.severity.WARN] = { enabled = false },
+          [vim.diagnostic.severity.INFO] = { enabled = false },
+          [vim.diagnostic.severity.HINT] = { enabled = false },
+        },
+      },
+    }
   end,
   opts = {
     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:

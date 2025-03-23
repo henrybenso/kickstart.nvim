@@ -6,7 +6,7 @@ return {
     require('catppuccin').setup {
       flavour = 'frappe',
       integrations = {
-        barbar = true,
+        -- barbar = true,
         mason = true,
       },
 
